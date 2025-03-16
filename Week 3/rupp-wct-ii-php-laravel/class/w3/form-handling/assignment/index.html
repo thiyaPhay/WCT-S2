@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Submission</title>
+    <style>
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    
+    <?php if (!empty($successMessage)): ?>
+        <div class="success"><?php echo $successMessage; ?></div>
+    <?php else: ?>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <div>
+                Name: 
+                <input type="text" name="name" >
+                <span class="error"><?php echo $nameErr; ?></span>
+            </div>
+            <br>
+            <div>
+                Email: 
+                <input type="email" name="email">
+                <span class="error"><?php echo $emailErr; ?></span>
+            </div>
+            <br>
+            <div>
+                Password: 
+                <input type="password" name="password">
+                <span class="error"><?php echo $passwordErr; ?></span>
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    <?php endif; ?>
+</body>
