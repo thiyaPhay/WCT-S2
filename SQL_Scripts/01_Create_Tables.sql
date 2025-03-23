@@ -1,9 +1,9 @@
--- Create the university_management database
-CREATE DATABASE university_management
+-- Create the university_Registration database
+CREATE DATABASE university_Registration
     DEFAULT CHARACTER SET = 'utf8mb4';
 
 -- Use the university_management database
-USE university_management;
+USE university_Registration;
 
 -- Students table
 CREATE TABLE students (
